@@ -1,19 +1,10 @@
 name: component-docker
-summary: <Fill in summary here>
+summary: juju-compose layer for Docker
 maintainer: Charles Butler <Charles.Butler@bushido>
 description: |
-  <Multi-line description here>
+  A minimalist docker charm layer for use with juju compose
 tags:
-  # Replace "misc" with one or more whitelisted tags from this list:
-  # https://juju.ubuntu.com/docs/authors-charm-metadata.html#charm-metadata
-  - misc
+  - containers
+  - component
 subordinate: false
-provides:
-  provides-relation:
-    interface: interface-name
-requires:
-  requires-relation:
-    interface: interface-name
-peers:
-  peer-relation:
-    interface: interface-name
+
