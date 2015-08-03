@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+service docker stop
+apt-get remove --purge -y docker-engine

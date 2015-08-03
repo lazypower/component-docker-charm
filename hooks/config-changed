@@ -1,0 +1,15 @@
+#!/bin/bash
+# config-changed occurs everytime a new configuration value is updated (juju set)
+
+UBUNTU_DOCKER_USER=$(config-get docker_user)
+
+if [ ! -z "${UBUNTU_DOCKER_USER}" ]; then
+      usermod -aG docker $UBUNTU_DOCKER_USER
+      echo $UBUNTU_DOCKER_USER >> .docker_user
+else
+    DOCKER_USER=$(cat .docker_user)
+    deluser $DOCKER_USER docker
+    rm .docker_user
+fi
+
+

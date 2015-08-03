@@ -1,0 +1,7 @@
+options:
+  docker_user:
+    type: string
+    default: ubuntu
+    description: |
+        Space separated list of users that can communicate with the docker daemon
+
